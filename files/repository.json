@@ -1,0 +1,27 @@
+{
+  "name": "Gekiryuu86's EmoTracker Packages",
+  "packages": [
+    {
+      "name": "MZMR Tracker for EmoTracker",
+      "author": "Gekiryuu86",
+      "game_name": "Metroid: Zero Mission Randomizer",
+      "version": "1.0.0.0",
+      "uid": "mzmr_tracker_gekiryuu86",
+      "link": "https://gekiryuu86.github.io/files/mzmr_tracker_gekiryuu86.zip",
+      "variants": [
+        {
+          "name": "Normal Difficulty Tracker"
+        },
+        {
+          "name": "Hard Difficulty Tracker"
+        },
+        {
+          "name": "Normal + Bingo Tracker"
+        },
+        {
+          "name": "Hard + Bingo Tracker",
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,171 @@
+/*
+-How to use Custom CSS for the Gamepad Viewer-
+http://mrmcpowned.com/gamepad
+
+Enabling a custom CSS is as easy as adding &css=[url to css file]
+to the end of the url like so:
+http://mrmcpowned.com/gamepad?p=1&css=https://gist.github.com/anonymous/526491dc02014099cd14/raw/d7bb0477ba984f794497f3f0f82cb33484dc7889/ps3.css
+
+If you're going to be using custom CSS for the gamepad viewer
+to design your own skin, we're assuming you have some sort of
+basic knowledge on how CSS works. I'd also suggest uploading
+your custom CSS to GitHub's gist as you can easily get the
+direct link for the file by copying the link address on the
+"Raw" button at the top right of the code.
+NOTE: If you're using gist, MAKE SURE TO NAME YOUR CSS FILE!
+It doesn't matter what you call it, so long as it ends in .css
+else the site won't read it and think it's just a plain text.
+
+Each CSS entry must be preceded by '.custom' since that's the 
+hardcoded class for a custom style. It doesn't make sense to 
+change this as you can only have one custom skin loaded at a time.
+
+If you're using images, they have to be uploaded to an image host of
+your choice. Personally, I'd go with Imgur since it's simple to upload
+and get the direct URL of the image. None of the images in this example
+will load because they're pointing to a location relative of the css 
+files, since this is normally in the main CSS file of the site.
+
+The following is a copy of the code used for displaying the PS3 controller
+skin on the Gamepad viewer. You can scroll below and read the comments to
+get an understanding of how the styling works and whatnot. Happy skinning!
+
+P.S. If you use this tool often and would like to 'buy me a coffee' you can
+do so via my Imraising page: https://imraising.tv/u/mrmcpowned
+
+*/
+
+/*BEGIN PS3 Controller Styling*/
+/*This class defines the base attributes of the skin*/
+.controller.custom{
+    background: url(images/layout.png); 
+    background-repeat: no-repeat;
+    background-position: 0px 0px;/* 
+    width: 158px;
+    height: 164px;
+    margin-left: -40px;
+    margin-top: -77px; */
+}
+.custom.disconnected {
+    background: url(images/disconnected.png);
+    background-repeat: no-repeat;
+}
+/* This hides the controller's button when disconnected so only the background image remains */ 
+.custom.disconnected div {
+    display: none;
+}
+.custom .bumpers{ /* The triggers are housed inside a div, so this sizes the div properly and positions it */
+    width: 102px;
+    height: 5px;
+    position: absolute;
+    left: 4px;
+}
+.custom .bumper{/* These are the actual triggers themselves */
+    width: 40px;
+    height: 5px;
+    background: url(images/buttonshoulder.png);
+    background-repeat: no-repeat;
+    opacity: 0;
+}
+.custom .bumper.pressed{
+    opacity: 1;
+}
+.custom .bumper.left{
+    float: left;
+}
+.custom .bumper.right{
+    float: right;
+}
+/* This is to size and position the containing div for the 
+start and select buttons. */
+.custom .arrows{
+    position: absolute;
+    width: 57px;
+    height: 17px;
+    left: 29px;
+    top: 60px;
+}
+/* Setting the size and CSS sprite for the start adn select buttons */
+.custom .back, .custom .start{
+    width: 17px;
+    height: 17px;
+}
+.custom .back.pressed, .custom .start.pressed{
+    background: url(images/buttonsmall.png);
+}
+.custom .back{
+    float: left;
+}
+.custom .start{
+    float: right;
+}
+/* Positioning and size of the container for the face buttons */
+.custom .abxy{
+    position: absolute;
+    width: 65px;
+    height: 35px;
+    left: 52px;
+    top: 15px;
+}
+/* base class used to simplify the sprite mapping */
+.custom .button{
+    position: absolute;
+    width:25px;
+    height:25px;
+}
+.custom .button.pressed{
+    background: url(images/buttonbig.png);
+}
+.custom .a{
+    bottom: 0px;
+    left: 0px;
+}
+.custom .b{
+    top: 0px;
+    right: 0px;
+}
+/* Dpad possitioning and sizing */
+.custom .dpad{
+    position: absolute;
+    width: 46px;
+    height: 46px;
+    top: 10px;
+    left: 0px;
+}
+.custom .face{
+    position: absolute;
+}
+.custom .face.up, .custom .face.down .custom .face.left, .custom .face.right{
+    width: 46px;
+    height: 46px;
+}
+.custom .face.up{
+    left: 15px;
+    top: 0;
+}
+.custom .face.down{
+    left: 15px;
+    bottom: 0px;
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+.custom .face.left{
+    top: 15px;
+    left: 0;
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+}
+.custom .face.right{
+    top: 15px;
+    right: 0px;
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+.custom .face.pressed{
+    background: url(images/dpad.png);
+}
+.custom.half{
+    margin-top: -38.5px;
+}
+
+/*END PS3 Controller Styling*/

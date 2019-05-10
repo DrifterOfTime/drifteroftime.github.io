@@ -8,8 +8,8 @@
 <channel>
 	<title>
 	Comments for Gekiryuu86&#039;s Projects and Blog	</title>
-	<atom:link href="/wordpress-static/comments/feed/" rel="self" type="application/rss+xml" />
-	<link>/wordpress-static</link>
+	<atom:link href="/comments/feed/" rel="self" type="application/rss+xml" />
+	<link></link>
 	<description>Gekiryuu86&#039;s Projects and Blog</description>
 	<lastBuildDate>2019-05-10 17:32:05</lastBuildDate>
 	<sy:updatePeriod>

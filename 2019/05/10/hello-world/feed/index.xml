@@ -8,8 +8,8 @@
 <channel>
 	<title>
 	Comments on: First Post	</title>
-	<atom:link href="/wordpress-static/2019/05/10/hello-world/feed/" rel="self" type="application/rss+xml" />
-	<link>/wordpress-static/2019/05/10/hello-world/</link>
+	<atom:link href="/2019/05/10/hello-world/feed/" rel="self" type="application/rss+xml" />
+	<link>/2019/05/10/hello-world/</link>
 	<description>Gekiryuu86&#039;s Projects and Blog</description>
 	<lastBuildDate>Fri, 10 May 2019 17:32:05 +0000</lastBuildDate>
 	<sy:updatePeriod>

@@ -2,12 +2,12 @@
 # BEGIN WordPress
 <IfModule mod_rewrite.c>
 RewriteEngine on
-RewriteCond %{HTTP_HOST} ^https://gekiryuu86.github.io/$
+RewriteCond %{HTTP_HOST} ^gekiryuu86.github.io/$
 RewriteCond %{REQUEST_URI} !^/wordpress/
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^(.*)$ /wordpress/$1
-RewriteCond %{HTTP_HOST} ^https://gekiryuu86.github.io/$
+RewriteCond %{HTTP_HOST} ^gekiryuu86.github.io/$
 RewriteRule ^(/)?$ wordpress/index.php [L] 
 </IfModule>
 
